@@ -7,7 +7,10 @@ file_name = STDIN.gets.chomp
 puts file_name
 extension = File.extname(file_name)
 puts "You have loaded a "+extension+" file"
-
+file_data = File.open(file_name)
+puts file_data
+hashr = Hash.from_xml(file_data)
+puts hashr
 #def macbeth_counter
 
 	#file_data = File.open(file)
